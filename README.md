@@ -1,75 +1,18 @@
-﻿# MCP Employee Knowledge Assistant
+﻿# Mcp_Employee_Knowledge_Assistant
 
-This is a small MCP project for the AI Bootcamp.
+Employee Knowledge Assistant built with MCP tools and API integration.
 
-## Project Goal
+## Overview
 
-Connect an AI assistant to an external source called `employees.csv`.
+This repository contains project work developed in VS Code.
 
-Without MCP, the AI only knows what the user types.
+## Getting Started
 
-With MCP, the AI can call tools that read live data from an external file.
+1. Clone this repository.
+2. Open the project in VS Code.
+3. Install dependencies based on the project stack (Python or Node.js).
+4. Run the project scripts or notebooks.
 
-## External Source
+## Repository
 
-`employees.csv`
-
-The file contains employee data:
-
-- id
-- name
-- department
-- email
-- salary
-
-## MCP Flow
-
-```text
-AI Assistant
-   ↓
-MCP Server
-   ↓
-employees.csv
-   ↓
-Answer returned to AI
-```
-
-## Tools Provided
-
-| Tool | What it does |
-|---|---|
-| `list_employees` | Shows all employees |
-| `find_employee` | Finds an employee by name |
-| `search_department` | Shows employees in one department |
-| `get_employee_email` | Gets an employee email address |
-
-## Example Questions
-
-Ask the AI assistant:
-
-```text
-List all employees.
-Find employee Ravi.
-Show employees in IT department.
-What is Asha's email?
-```
-
-## Install
-
-```bash
-pip install mcp
-```
-
-## Run
-
-```bash
-python server.py
-```
-
-## Why This Project Is Useful
-
-This project shows when MCP is needed.
-
-Use normal AI for thinking and explanation.
-
-Use MCP when AI must connect to external data, tools, or systems.
+https://github.com/gireeshvuyyuru501-design/mcp_employee_knowledge_assistant
