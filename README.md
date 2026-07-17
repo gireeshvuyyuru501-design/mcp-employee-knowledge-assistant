@@ -1,19 +1,267 @@
-﻿# Mcp_Employee_Knowledge_Assistant
+# 🚀 Enterprise Employee Knowledge Assistant
 
-Employee Knowledge Assistant built with MCP tools and API integration.
+An enterprise-grade **Employee Knowledge Assistant** built using **Model Context Protocol (MCP)**, **FastMCP**, **FastAPI**, **PostgreSQL**, and **Claude Desktop**. This project demonstrates how Large Language Models can securely interact with enterprise employee data through custom MCP tools and REST APIs.
 
-## Overview
+---
 
-This repository contains project work developed in VS Code.
+## 📌 Overview
 
-## Getting Started
+The Employee Knowledge Assistant enables AI applications such as Claude Desktop to retrieve employee information using custom MCP tools backed by a PostgreSQL database.
 
-1. Clone this repository.
-2. Open the project in VS Code.
-3. Install dependencies based on the project stack (Python or Node.js).
-4. Run the project scripts or notebooks.
+The application exposes both:
 
-## Repository
+- **MCP Tools** for AI assistants
+- **REST APIs** using FastAPI
+- **PostgreSQL** as the enterprise data source
 
-https://github.com/gireeshvuyyuru501-design/mcp_employee_knowledge_assistant
+---
 
+# 🏗 Architecture
+
+```
+                    Claude Desktop
+                           │
+                           ▼
+                 Model Context Protocol
+                           │
+                           ▼
+                     FastMCP Server
+                           │
+               ┌───────────┴───────────┐
+               ▼                       ▼
+        Employee MCP Tools        FastAPI REST API
+               │                       │
+               └───────────┬───────────┘
+                           ▼
+                  Python Business Logic
+                           ▼
+                    PostgreSQL Database
+                           ▼
+                     Employee Records
+```
+
+---
+
+# ✨ Features
+
+- Employee Lookup by Employee ID
+- Employee Listing
+- Employee Summary
+- PostgreSQL Integration
+- FastAPI REST APIs
+- Claude Desktop Integration
+- MCP Inspector Testing
+- Environment Configuration (.env)
+- Enterprise Project Structure
+
+---
+
+# 🛠 Tech Stack
+
+### Backend
+
+- Python 3.x
+- FastAPI
+- FastMCP
+- Model Context Protocol (MCP)
+- Uvicorn
+
+### Database
+
+- PostgreSQL
+- pgAdmin4
+- psycopg2
+
+### AI
+
+- Claude Desktop
+- MCP Inspector
+
+### Development
+
+- Git
+- GitHub
+- VS Code
+- python-dotenv
+
+---
+
+# 📁 Project Structure
+
+```
+mcp_employee_knowledge_assistant/
+
+│
+├── api.py
+├── server.py
+├── employees.csv
+├── README.md
+├── .env
+├── database/
+│
+├── test_tools_locally.py
+│
+└── .gitignore
+```
+
+---
+
+# MCP Tools
+
+| Tool | Description |
+|-------|-------------|
+| list_employees | Returns all employees |
+| employee_summary | Returns employee statistics |
+| get_employee_by_id | Retrieves employee by Employee ID |
+
+---
+
+# REST APIs
+
+| Endpoint | Description |
+|-----------|-------------|
+| GET /employees | List employees |
+| GET /employees/{employee_id} | Employee lookup |
+| GET /employee-summary | Employee summary |
+
+Swagger UI
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# Running FastAPI
+
+```bash
+uvicorn api:app --reload
+```
+
+---
+
+# Running MCP Server
+
+```bash
+uv run --with mcp mcp run server.py
+```
+
+---
+
+# Running Claude Desktop
+
+Configure:
+
+```
+claude_desktop_config.json
+```
+
+```json
+{
+  "mcpServers": {
+    "employee-knowledge-assistant": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp",
+        "mcp",
+        "run",
+        "C:\\AI\\MCP\\mcp_employee_knowledge_assistant\\mcp_employee_knowledge_assistant\\server.py"
+      ]
+    }
+  }
+}
+```
+
+---
+
+# Database
+
+Database
+
+```
+employee_db
+```
+
+Table
+
+```
+employees
+```
+
+---
+
+# Screenshots
+
+## MCP Inspector
+
+(Add screenshot)
+
+---
+
+## Claude Desktop
+
+(Add screenshot)
+
+---
+
+## Swagger UI
+
+(Add screenshot)
+
+---
+
+# Skills Demonstrated
+
+- Model Context Protocol (MCP)
+- FastMCP
+- FastAPI
+- REST API Development
+- PostgreSQL
+- SQL
+- Python
+- AI Tool Development
+- Claude Desktop Integration
+- MCP Inspector
+- Environment Configuration
+- Git
+- GitHub
+
+---
+
+# Future Enhancements
+
+- JWT Authentication
+- CRUD Operations
+- Docker
+- Docker Compose
+- Kubernetes
+- GitHub Actions CI/CD
+- Role-Based Access Control
+- LangChain Integration
+- LangGraph Integration
+- Vector Database
+- RAG Pipeline
+- AWS Deployment
+- Azure Deployment
+
+---
+
+# Author
+
+**Gireesh Gopal Reddy Vuyyuru**
+
+GitHub:
+Mail:Girishsap45@gmail.com
+https://github.com/gireeshvuyyuru501-design
+
+LinkedIn:www.linkedin.com/in/girish-genai-engineer
+
+(Add LinkedIn URL)
+
+---
+
+# License
+
+This project is licensed under the MIT License.
