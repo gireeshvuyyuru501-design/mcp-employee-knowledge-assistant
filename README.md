@@ -192,25 +192,6 @@ employees
 
 ---
 
-# Screenshots
-
-## MCP Inspector
-
-(Add screenshot)
-
----
-
-## Claude Desktop
-
-(Add screenshot)
-
----
-
-## Swagger UI
-
-(Add screenshot)
-
----
 
 # Skills Demonstrated
 
